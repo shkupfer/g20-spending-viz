@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G20 Government Expenditures Data - Breakdown</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dosis'>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/helpers.js"></script>
+    <script type="text/javascript" src="js/breakdown.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="fixed_top">
+            <div id="header">
+                <div id="header_text">
+                    G20 Government Expenditures Data
+                </div>
+                <div id="g20_logo">
+                    <a href="https://g20.org/"><img src="img/g20_logo.png" id="logo_img"/></a>
+                </div>
+            </div>
+            <div id="menu">
+                <a href="index.html">Home</a> <a href="breakdown.html" id="current_page">Breakdown</a> <a href="trends.html">Trends</a> <a href="about.html">About</a>
+            </div>
+        </div>
+        <div id="content">
+            <div id="buttons">
+                <button id="spending_totals_btn" class="enabled">Spending in $</button>
+                <button id="spending_gdp_btn">Spending as % of GDP</button>
+                <button id="spending_percapita_btn">Spending per Capita</button>
+            </div>
+            <table id="charts">
+                <tr id="spending_totals_column" class="dashboard">
+                    <td id="spending_totals_column_filter_0" class="category_filter"></td>
+                    <td id="spending_totals_column_chart" class="column_chart"></td>
+                </tr>
+                <tr id="spending_gdp_column" class="dashboard">
+                    <td id="spending_gdp_column_filter_0" class="category_filter"></td>
+                    <td id="spending_gdp_column_chart" class="column_chart"></td>
+                </tr>
+                <tr id="spending_percapita_column" class="dashboard">
+                    <td id="spending_percapita_column_filter_0" class="category_filter"></td>
+                    <td id="spending_percapita_column_chart" class="column_chart"></td>
+                </tr>
+                <tr id="geo_spending_totals" class="dashboard">
+                    <td>
+                        <div id="geo_spending_totals_filter_0" class="category_filter"></div>
+                        <div id="geo_spending_totals_filter_1" class="category_filter bottom_filter"></div>
+                    </td>
+                    <td id="geo_spending_totals_chart" class="geo_chart"></td>
+                </tr>
+                <tr id="geo_gdp" class="dashboard">
+                    <td>
+                        <div id="geo_gdp_filter_0" class="category_filter"></div>
+                        <div id="geo_gdp_filter_1" class="category_filter bottom_filter"></div>
+                    </td>
+                    <td id="geo_gdp_chart" class="geo_chart"></td>
+                </tr>
+                <tr id="geo_percapita" class="dashboard">
+                    <td>
+                        <div id="geo_percapita_filter_0" class="category_filter"></div>
+                        <div id="geo_percapita_filter_1" class="category_filter bottom_filter"></div>
+                    </td>
+                    <td id="geo_percapita_chart" class="geo_chart"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

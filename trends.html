@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>G20 Government Expenditures Data - Breakdown</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dosis'>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/helpers.js"></script>
+    <script type="text/javascript" src="js/trends.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="fixed_top">
+            <div id="header">
+                <div id="header_text">
+                    G20 Government Expenditures Data
+                </div>
+                <div id="g20_logo">
+                    <a href="https://g20.org/"><img src="img/g20_logo.png" id="logo_img"/></a>
+                </div>
+            </div>
+            <div id="menu">
+                <a href="index.html">Home</a> <a href="breakdown.html">Breakdown</a> <a href="trends.html" id="current_page">Trends</a> <a href="about.html">About</a>
+            </div>
+        </div>
+        <div id="content">
+            <!--Buttons to switch between chart topics-->
+            <div id="buttons">
+                <button id="spending_btn">Spending in $</button>
+                <button id="growth_btn" class="enabled">Spending Growth</button>
+                <button id="perc_btn">Spending % Change</button>
+            </div>
+            <!--Using a table to keep filters and charts lined up-->
+            <!--All of these elements will be used by our Javascript-->
+            <table id="charts">
+                <tr id="over_time_column" class="dashboard">
+                    <td id="over_time_column_filter_0" class="category_filter"></td>
+                    <td id="over_time_column_chart" class="column_chart"></td>
+                </tr>
+                <tr id="diff_over_time_column" class="dashboard">
+                    <td id="diff_over_time_column_filter_0" class="category_filter"></td>
+                    <td id="diff_over_time_column_chart" class="column_chart"></td>
+                </tr>
+                <tr id="perc_change_over_time_column" class="dashboard">
+                    <td id="perc_change_over_time_column_filter_0" class="category_filter"></td>
+                    <td id="perc_change_over_time_column_chart" class="column_chart"></td>
+                </tr>
+                <tr id="geo_spending" class="dashboard">
+                    <td>
+                        <div id="geo_spending_filter_0" class="category_filter"></div>
+                        <div id="geo_spending_filter_1" class="category_filter bottom_filter"></div>
+                    </td>
+                    <td id="geo_spending_chart" class="geo_chart"></td>
+                </tr>
+                <tr id="geo_diff" class="dashboard">
+                    <td>
+                        <div id="geo_diff_filter_0" class="category_filter"></div>
+                        <div id="geo_diff_filter_1" class="category_filter bottom_filter"></div>
+                    </td>
+                    <td id="geo_diff_chart" class="geo_chart"></td>
+                </tr>
+                <tr id="geo_perc_change" class="dashboard">
+                    <td>
+                        <div id="geo_perc_change_filter_0" class="category_filter"></div>
+                        <div id="geo_perc_change_filter_1" class="category_filter bottom_filter"></div>
+                    </td>
+                    <td id="geo_perc_change_chart" class="geo_chart"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
